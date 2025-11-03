@@ -126,3 +126,6 @@ The following packages are incompatible
 ```
 
 See github issue: [Pyarrow version 15 not compatible with Python version 3.13](https://github.com/udacity/build-ml-pipeline-for-short-term-rental-prices/issues/73?reload=1)
+
+Fix with local component successful.
+Artifact uploaded to W&B, see https://wandb.ai/thilo20-cariad-se/nyc_airbnb/artifacts/raw_data/sample.csv/v0
