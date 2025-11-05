@@ -141,3 +141,6 @@ Notice these files are large (~10 MB) and require
 ```
 git config --global http.postBuffer 157286400
 ```
+
+Notice: On W&B the [EDA notebook](https://wandb.ai/thilo20-cariad-se/nyc_airbnb/artifacts/code/source-nyc_airbnb-EDA.ipynb/v15/files/EDA.ipynb) was not properly saved. Cell results are missing. So please see local file in this repo instead:
+src/eda/EDA.ipynb
