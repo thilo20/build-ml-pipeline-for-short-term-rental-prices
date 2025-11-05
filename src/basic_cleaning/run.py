@@ -1,18 +1,18 @@
 #!/usr/bin/env python
 """
-Performs basic cleaning on the data and save the results in Weights & Biases
+Download from W&B the raw dataset and apply some basic data cleaning, exporting the result to a new artifact.
 """
-
 import argparse
 import logging
-
 import wandb
+
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)-15s %(message)s")
 logger = logging.getLogger()
 
 
 def go(args):
+
     run = wandb.init(job_type="basic_cleaning")
     run.config.update(args)
 
@@ -26,15 +26,52 @@ def go(args):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="This steps cleans the data")
+
+    parser = argparse.ArgumentParser(description="A very basic data cleaning")
+
 
     parser.add_argument(
-        "--parameter1", type=str, help="Description for parameter1", required=True
+        "--input_artifact", 
+        type=## INSERT TYPE HERE: str, float or int,
+        help=## INSERT DESCRIPTION HERE,
+        required=True
     )
 
     parser.add_argument(
-        "--parameter2", type=int, help="Description for parameter2", required=True
+        "--output_artifact", 
+        type=## INSERT TYPE HERE: str, float or int,
+        help=## INSERT DESCRIPTION HERE,
+        required=True
     )
+
+    parser.add_argument(
+        "--output_type", 
+        type=## INSERT TYPE HERE: str, float or int,
+        help=## INSERT DESCRIPTION HERE,
+        required=True
+    )
+
+    parser.add_argument(
+        "--output_description", 
+        type=## INSERT TYPE HERE: str, float or int,
+        help=## INSERT DESCRIPTION HERE,
+        required=True
+    )
+
+    parser.add_argument(
+        "--min_price", 
+        type=## INSERT TYPE HERE: str, float or int,
+        help=## INSERT DESCRIPTION HERE,
+        required=True
+    )
+
+    parser.add_argument(
+        "--max_price", 
+        type=## INSERT TYPE HERE: str, float or int,
+        help=## INSERT DESCRIPTION HERE,
+        required=True
+    )
+
 
     args = parser.parse_args()
 
