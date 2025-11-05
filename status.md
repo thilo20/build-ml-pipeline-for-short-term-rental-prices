@@ -144,3 +144,20 @@ git config --global http.postBuffer 157286400
 
 Notice: On W&B the [EDA notebook](https://wandb.ai/thilo20-cariad-se/nyc_airbnb/artifacts/code/source-nyc_airbnb-EDA.ipynb/v15/files/EDA.ipynb) was not properly saved. Cell results are missing. So please see local file in this repo instead:
 src/eda/EDA.ipynb
+
+4. test results in step 'data_check' look successful
+
+```
+rootdir: /Users/thilo/udacity/build-ml-pipeline-for-short-term-rental-prices/src/data_check
+plugins: anyio-4.11.0
+collected 6 items
+
+test_data.py::test_column_names PASSED                                        [ 16%]
+test_data.py::test_neighborhood_names PASSED                                  [ 33%]
+test_data.py::test_proper_boundaries PASSED                                   [ 50%]
+test_data.py::test_similar_neigh_distrib PASSED                               [ 66%]
+test_data.py::test_row_count PASSED                                           [ 83%]
+test_data.py::test_price_range PASSED                                         [100%]
+```
+
+Patching conda.yml was required to run this step.
