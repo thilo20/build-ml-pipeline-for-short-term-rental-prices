@@ -129,3 +129,15 @@ See github issue: [Pyarrow version 15 not compatible with Python version 3.13](h
 
 Fix with local component successful.
 Artifact uploaded to W&B, see https://wandb.ai/thilo20-cariad-se/nyc_airbnb/artifacts/raw_data/sample.csv/v0
+
+3. running eda step failed
+
+Running `mlflow run src/eda` failed due to python 3.13 incompatibility.
+Resolved by explicit use of python=3.12 after clarification with Udacity support.
+
+Pushed EDA notebook and ydata_report_before.html to git repo.
+Notice these files are large (~10 MB) and require
+
+```
+git config --global http.postBuffer 157286400
+```
